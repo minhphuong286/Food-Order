@@ -1,0 +1,37 @@
+@import '../../../../assets/scss/color';
+
+div {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+
+    input {
+        border: none;
+        height: 3rem;
+        border-radius: 10rem 0 0 10rem;
+        width: 20rem;
+        background-color: $color8;
+        padding: 1.2rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+        outline: none;
+    }
+
+    button {
+        height: 3rem;
+        width: 6rem;
+        font-size: 1.5rem;
+        border-radius: 0 10rem 10rem 0;
+        border: none;
+        background-color: $color1;
+        color: $color3;
+        opacity: 0.8;
+        outline: none;
+
+        &:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+}

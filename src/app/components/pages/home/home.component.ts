@@ -13,18 +13,16 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private api: FoodService,
-    activateRoute: ActivatedRoute
+    activatedRoute: ActivatedRoute
   ) {
-    activateRoute.params.subscribe((params) => {
-      console.log("params:", params)
+    activatedRoute.params.subscribe((params) => {
       if (params.searchTerm) {
         this.foods = this.api.getAllFoodBySearchTerm(params.searchTerm)
       } else if(params.tag){
-        console.log("params:", params)
         this.foods = this.api.getAllFoodByTag(params.tag)
       } 
       else {
-        this.foods = api.getAll()
+        this.foods = this.api.getAll()
       }
     })
   }

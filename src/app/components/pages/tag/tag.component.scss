@@ -1,0 +1,16 @@
+@import '../../../../assets/scss/color';
+
+div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    a {
+        color: $color9;
+        background-color: $color10;
+        margin: 0.2rem 0.15rem;
+        padding: 0.3rem 1rem;
+        border-radius: 10rem;
+        font-weight: 800;
+    }
+}

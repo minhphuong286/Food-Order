@@ -16,9 +16,14 @@ export class HomeComponent implements OnInit {
     activateRoute: ActivatedRoute
   ) {
     activateRoute.params.subscribe((params) => {
+      console.log("params:", params)
       if (params.searchTerm) {
         this.foods = this.api.getAllFoodBySearchTerm(params.searchTerm)
-      } else {
+      } else if(params.tag){
+        console.log("params:", params)
+        this.foods = this.api.getAllFoodByTag(params.tag)
+      } 
+      else {
         this.foods = api.getAll()
       }
     })
@@ -29,3 +34,4 @@ export class HomeComponent implements OnInit {
   }
 
 }
+  
